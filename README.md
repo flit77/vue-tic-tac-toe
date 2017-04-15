@@ -2,7 +2,7 @@
 
 > A Vue.js project
 
-Educational project, [source article ](https://scotch.io/tutorials/building-a-tic-tac-toe-game-with-vue-2-part-1)
+Educational project, original source article is here (https://scotch.io/tutorials/building-a-tic-tac-toe-game-with-vue-2-part-1)
 
 ## Build Setup
 
