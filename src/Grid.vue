@@ -1,21 +1,26 @@
 <template>
-  <table class="grid">
-    <tr>
-      <cell name="1"></cell>
-      <cell name="2"></cell>
-      <cell name="3"></cell>
-    </tr>
-    <tr>
-      <cell name="4"></cell>
-      <cell name="5"></cell>
-      <cell name="6"></cell>
-    </tr>
-    <tr>
-      <cell name="7"></cell>
-      <cell name="8"></cell>
-      <cell name="9"></cell>
-    </tr>
-  </table>
+  <div>
+    <div class="gameStatus" :class="gameStatusColor">
+        {{ gameStatusMessage }}
+    </div>
+    <table class="grid">
+      <tr>
+        <cell name="1"></cell>
+        <cell name="2"></cell>
+        <cell name="3"></cell>
+      </tr>
+      <tr>
+        <cell name="4"></cell>
+        <cell name="5"></cell>
+        <cell name="6"></cell>
+      </tr>
+      <tr>
+        <cell name="7"></cell>
+        <cell name="8"></cell>
+        <cell name="9"></cell>
+      </tr>
+    </table>
+  </div>
 </template>
 
 <script>
@@ -48,7 +53,7 @@
               // contains all (8) possible winning conditions
               winConditions: [
                   [1, 2, 3], [4, 5, 6], [7, 8, 9], // rows
-                  [1, 4, 7], [2, 5, 8],    [3, 6, 9], // columns
+                  [1, 4, 7], [2, 5, 8], [3, 6, 9], // columns
                   [1, 5, 9], [3, 5, 7]             // diagonals
               ],
         }
