@@ -19,7 +19,10 @@
 </template>
 
 <script>
+    import Cell from './Cell.vue';
+
     export default {
+      components: { Cell },
       data () {
         return {
             // can be O or X
