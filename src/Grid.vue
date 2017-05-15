@@ -20,19 +20,6 @@
 
 <script>
     export default {
-      methods: {
-          strike () {
-              if (! this.frozen) {
-                  // gets either X or O from the Grid component
-                  this.mark = this.$parent.activePlayer
-
-                  this.frozen = true
-
-                  // fires an event to notify the Grid component that a mark is placed
-                  Event.$emit('strike', this.name)
-              }
-          }
-      },        
       data () {
         return {
             // can be O or X
