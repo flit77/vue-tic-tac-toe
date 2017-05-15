@@ -95,7 +95,17 @@
               return false;
           }
           return true;
-        }
+        },
+        gameIsWon () {			
+          // fires win event for the App component to change the score
+          Event.$emit('win', this.activePlayer)
+          // sets the game status message
+          this.gameStatusMessage = `${this.activePlayer} Wins !`
+          // fires an event for the Cell to freeze
+          Event.$emit('freeze')
+          // sets the status to win
+          return 'win'
+        },        
       },
       watch: {
           // watches for change in the value of gameStatus and changes the status 
