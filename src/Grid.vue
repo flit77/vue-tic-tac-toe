@@ -73,6 +73,29 @@
           // sets the status to turn
           return 'turn'
         },        
+        checkForWin () {
+          for (let i = 0; i < this.winConditions.length; i++) {
+            // gets a single condition wc from the whole array
+            let wc = this.winConditions[i]
+            let cells = this.cells
+            // compares 3 cell values based on the cells in the condition
+            if (this.areEqual(cells[wc[0]], cells[wc[1]], cells[wc[2]])) {
+              return true
+            }
+          }
+          return false
+        },
+        // helper function for comparing cell values
+        areEqual () {
+          var len = arguments.length;
+          // loops through each value and compares them with an empty sting and 
+          // for inequality
+          for (var i = 1; i < len; i++){
+            if (arguments[i] === '' || arguments[i] !== arguments[i-1])
+              return false;
+          }
+          return true;
+        }
       },
       watch: {
           // watches for change in the value of gameStatus and changes the status 
