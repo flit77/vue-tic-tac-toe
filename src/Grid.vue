@@ -136,6 +136,9 @@
           this.gameStatus = this.changeGameStatus()
           this.changePlayer()
         })
+        Event.$on('gridReset', () => {
+            Object.assign(this.$data, this.$options.data())
+        })        
       },
       computed: {
           // helper property to get the non-active player
