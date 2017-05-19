@@ -4,6 +4,7 @@
 
 <script>
     export default {
+        props: ['name'],
         data () {
           return {
             // enables the player to place a mark
